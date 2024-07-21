@@ -9,3 +9,6 @@ SEED = 42
 
 TRAIN_DATASET_PATH = "../data/df_train.feather"
 TEST_DATASET_PATH = "../data/df_test.feather"
+
+TRANSFORMER_PATH = "../data/transformer.pkl"
+TRANSFORMED_TRAIN_DATASET_PATH = "../data/df_train_transformed.feather"
