@@ -77,6 +77,7 @@ class CustomTransformer(BaseEstimator, TransformerMixin):
     def fit(self, X, y):
         dict_merged_levesl = {}
         dict_outliers_threshold = {}
+        dict_tables = {}
 
         for feature in self.categorical_variables:
             x = X[feature].values
@@ -84,6 +85,7 @@ class CustomTransformer(BaseEstimator, TransformerMixin):
             groups = table.index.tolist()
             group_mapping = dict(zip(groups, range(len(groups))))
             dict_merged_levesl[feature] = group_mapping
+            dict_tables[feature] = table
 
         for feature in self.numerical_variables:
             x = X[feature].values
@@ -92,6 +94,7 @@ class CustomTransformer(BaseEstimator, TransformerMixin):
 
         self.dict_merged_levesl = dict_merged_levesl
         self.dict_outliers_threshold = dict_outliers_threshold
+        self.dict_tables = dict_tables
 
         return self
 

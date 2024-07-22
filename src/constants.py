@@ -11,4 +11,7 @@ TRAIN_DATASET_PATH = "../data/df_train.feather"
 TEST_DATASET_PATH = "../data/df_test.feather"
 
 TRANSFORMER_PATH = "../data/transformer.pkl"
+SCALER_PATH = "../data/scaler.pkl"
 TRANSFORMED_TRAIN_DATASET_PATH = "../data/df_train_transformed.feather"
+
+BEST_MODEL_PATH = "../data/best_model.pkl"
